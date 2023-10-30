@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Fruits</title>
+    <style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+</head>
+
+
+<body>
+<a href="http://127.0.0.1:5000/api/update_basket_a">Update Basket A</a>
+    <p>Basket A</p>
+      <table>
+      <!-- tr represents a row -->
+      <tr>
+        {% for col_name in table_title_a %}
+            <th>{{col_name}}</th>
+        {% endfor %}
+      </tr>
+      {% for row in sql_table_a %}
+      <tr>
+        {% for col in row %}
+        <td>{{col}}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+      </table> 
+    
+    <p>Basket B</p>
+      <table>
+      <!-- tr represents a row -->
+      <tr>
+        {% for col_name in table_title_b %}
+            <th>{{col_name}}</th>
+        {% endfor %}
+      </tr>
+      {% for row in sql_table_b %}
+      <tr>
+        {% for col in row %}
+        <td>{{col}}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+ 
+    </table> 
+    
+    <p>Unique Fruits from Both Baskets</p>
+      <table>
+      <!-- tr represents a row -->
+      <tr>
+        {% for col_name in table_title_uni %}
+            <th>{{col_name}}</th>
+        {% endfor %}
+      </tr>
+      {% for row in sql_table_uni %}
+      <tr>
+        {% for col in row %}
+        <td>{{col}}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+ 
+    </table> 
+
+</body>
+</html>
